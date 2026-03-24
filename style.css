@@ -174,12 +174,18 @@ img, video {
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(15, 14, 127, 0.15);
   background: #000;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
 }
 
-.inline-video {
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  border: 0;
 }
 
 /* --- Sections Common --- */
