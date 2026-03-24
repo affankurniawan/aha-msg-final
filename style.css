@@ -107,6 +107,10 @@ img, video {
   font-weight: 800 !important;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 /* --- Hero Section (Split Layout) --- */
 .hero {
   position: relative;
@@ -264,7 +268,7 @@ img, video {
 }
 
 .problem-title {
-  text-align: left;
+  text-align: center;
   font-size: 2.5rem;
   color: var(--primary-start);
   font-weight: 800;
@@ -373,14 +377,45 @@ img, video {
 }
 
 .problem-banner {
-  background: var(--primary-start);
-  color: #FFFFFF;
-  text-align: center;
-  padding: 24px;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-top: 40px;
-  border-radius: 8px;
+  margin-top: 60px;
+  position: relative;
+  padding: 3px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end), #FACC15);
+  box-shadow: 0 15px 30px rgba(29, 56, 139, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(29, 56, 139, 0.25);
+}
+
+.banner-glass {
+  background: var(--bg-light);
+  border-radius: 17px;
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: left;
+}
+
+.banner-glass p {
+  margin: 0;
+  font-size: 1.35rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.banner-glass strong {
+  font-weight: 800;
+}
+
+.banner-icon {
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px rgba(217, 119, 6, 0.3));
 }
 
 /* --- Framework Solusi (Metode MSG) --- */
@@ -1035,6 +1070,7 @@ img, video {
   .hero-title { font-size: 2rem; }
   .hero-subtitle { font-size: 1.05rem; }
   .problem-grid, .msg-grid { grid-template-columns: 1fr; }
+  .banner-glass { flex-direction: column; text-align: center; gap: 16px; padding: 24px; }
   .section { padding: 60px 0; }
   .pricing-grid { grid-template-columns: 1fr; align-items: stretch; }
   .premium-card { padding: 40px; margin-top: 30px; }
