@@ -114,6 +114,40 @@
             </div>
         </section>
 
+        <!-- Ekosistem Cinematic Masterpiece -->
+        <section class="section ekosistem" id="ekosistem">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Ekosistem Cinematic Masterpiece</h2>
+                    <p class="section-desc">Sinergi antara aset visual, manajemen iklan, dan retensi audiens.</p>
+                </div>
+                
+                <div class="eko-grid reveal-up delay-1">
+                    <div class="eko-item eko-1">
+                        <div class="eko-circle">
+                            <span class="icon">🎬</span>
+                            <span class="text">AI 4K Cinematic Video</span>
+                        </div>
+                        <p class="eko-desc">Menghidupkan Storytelling</p>
+                    </div>
+                    <div class="eko-item eko-2">
+                        <div class="eko-circle">
+                            <span class="icon">📈</span>
+                            <span class="text">Meta Ads Integration</span>
+                        </div>
+                        <p class="eko-desc">Boost Aset ke audiens yang tepat</p>
+                    </div>
+                    <div class="eko-item eko-3">
+                        <div class="eko-circle">
+                            <span class="icon">🖼️</span>
+                            <span class="text">Carousel Turunan</span>
+                        </div>
+                        <p class="eko-desc">Membangun Literasi dan kedalaman Informasi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Tabel Disrupsi -->
         <section class="section disruption" id="disrupsi">
             <div class="container">
@@ -158,48 +192,104 @@
             </div>
         </section>
 
-        <!-- The AHA Curve (Interactive Component) -->
+        <!-- The AHA Curve & Komitmen -->
         <section class="section curve" id="aha-curve">
             <div class="container">
                 <div class="section-header reveal-up">
-                    <h2 class="section-title">The AHA Curve</h2>
-                    <p class="section-desc">Mengapa hubungan emosional butuh waktu untuk matang (± 12 minggu), bukan sekadar lonjakan viral sesaat.</p>
+                    <h2 class="section-title">Komitmen</h2>
                 </div>
                 
-                <div class="chart-container reveal-up delay-1">
-                    <!-- SVG Chart that will be animated by JS -->
-                    <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" class="aha-curve-svg" id="curveSvg">
-                        <!-- Grid Lines -->
-                        <line x1="50" y1="350" x2="750" y2="350" stroke="#E2E8F0" stroke-width="2"/>
-                        <line x1="50" y1="50" x2="50" y2="350" stroke="#E2E8F0" stroke-width="2"/>
-                        
-                        <!-- Labels -->
-                        <text x="30" y="200" transform="rotate(-90 30,200)" fill="#0F0E7F" font-size="14" font-weight="600" text-anchor="middle">Loyalitas & Keterlibatan</text>
-                        <text x="400" y="380" fill="#0F0E7F" font-size="14" font-weight="600" text-anchor="middle">Waktu (Minggu)</text>
-                        
-                        <!-- Week Markers -->
-                        <text x="150" y="365" fill="#64748B" font-size="12" text-anchor="middle">W-1</text>
-                        <text x="350" y="365" fill="#64748B" font-size="12" text-anchor="middle">W-4</text>
-                        <text x="550" y="365" fill="#64748B" font-size="12" text-anchor="middle">W-8</text>
-                        <text x="700" y="365" fill="#64748B" font-size="12" text-anchor="middle">W-12 (Matang)</text>
-                        
-                        <!-- Path: Viral Sesaat (Red/Grey) -->
-                        <path id="pathViral" d="M 50 350 C 70 50, 150 50, 200 150 C 250 250, 400 340, 700 340" fill="none" class="path-viral" stroke="#94A3B8" stroke-width="3" stroke-dasharray="8,8" />
-                        <text x="200" y="110" fill="#64748B" font-size="14" font-weight="600">Viral Sesaat (Jatuh)</text>
-                        
-                        <!-- Path: Narasi Episodik (AHA Curve - Blue Gradient) -->
-                        <path id="pathAHA" d="M 50 350 C 300 350, 400 50, 750 50" fill="none" class="path-aha" stroke="url(#ahaGradient)" stroke-width="5" stroke-linecap="round"/>
-                        <circle cx="750" cy="50" r="8" fill="#F4C144" class="aha-curve-dot" />
-                        <text x="750" y="30" fill="#1D388B" font-size="16" font-weight="800" text-anchor="end">Narasi Episodik (AHA Curve)</text>
+                <div class="curve-split reveal-up delay-1">
+                    <div class="chart-container">
+                        <!-- SVG Chart that will be animated by JS -->
+                        <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" class="aha-curve-svg" id="curveSvg">
+                            <!-- Grid Lines -->
+                            <line x1="50" y1="350" x2="750" y2="350" stroke="#E2E8F0" stroke-width="2"/>
+                            <line x1="50" y1="50" x2="50" y2="350" stroke="#E2E8F0" stroke-width="2"/>
+                            
+                            <!-- Labels -->
+                            <text x="30" y="200" transform="rotate(-90 30,200)" fill="#0F0E7F" font-size="14" font-weight="600" text-anchor="middle">Tingkat Kepercayaan</text>
+                            
+                            <!-- Week Markers -->
+                            <text x="150" y="365" fill="#64748B" font-size="12" text-anchor="middle">2</text>
+                            <text x="250" y="365" fill="#64748B" font-size="12" text-anchor="middle">4</text>
+                            <text x="350" y="365" fill="#64748B" font-size="12" text-anchor="middle">6</text>
+                            <text x="450" y="365" fill="#64748B" font-size="12" text-anchor="middle">8</text>
+                            <text x="550" y="365" fill="#64748B" font-size="12" text-anchor="middle">10</text>
+                            <text x="650" y="365" fill="#64748B" font-size="12" text-anchor="middle">12</text>
+                            <text x="350" y="385" fill="#0F0E7F" font-size="14" font-weight="800" text-anchor="middle">Waktu (Minggu)</text>
+                            
+                            <!-- Path: Viral Sesaat (Red/Grey) -->
+                            <path id="pathViral" d="M 50 350 C 70 50, 150 50, 160 340 L 650 340" fill="none" class="path-viral" stroke="#94A3B8" stroke-width="3" stroke-dasharray="8,8" />
+                            <text x="550" y="325" fill="#64748B" font-size="16" font-weight="600" text-anchor="middle">Viral Sesaat</text>
+                            
+                            <!-- Path: Narasi Episodik (AHA Curve - Blue Gradient) -->
+                            <path id="pathAHA" d="M 50 350 C 160 300, 350 250, 650 50" fill="none" class="path-aha" stroke="url(#ahaGradient)" stroke-width="5" stroke-linecap="round"/>
+                            <circle cx="650" cy="50" r="8" fill="#F4C144" class="aha-curve-dot" />
+                            <text x="550" y="150" fill="#1D388B" font-size="20" font-weight="800" text-anchor="middle">AHA Curve</text>
 
-                        <!-- Gradient Def -->
-                        <defs>
-                            <linearGradient id="ahaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#FACC15" />
-                                <stop offset="100%" stop-color="#D97706" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                            <!-- Gradient Def -->
+                            <defs>
+                                <linearGradient id="ahaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#FACC15" />
+                                    <stop offset="100%" stop-color="#D97706" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    
+                    <div class="commitment-box">
+                        <h3 class="komitmen-title">Mengapa komitmen minimal 1 Season (3 Bulan)?</h3>
+                        <p class="komitmen-desc">Narasi yang kuat memerlukan <strong>waktu minimal 12 minggu</strong> untuk matang. Episodik memfasilitasi hubungan emosional yang mengakar, mengubah audiens menjadi loyalitas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategi Harga -->
+        <section class="section pricing" id="harga">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Strategi Harga</h2>
+                </div>
+                
+                <div class="pricing-grid reveal-up delay-1">
+                    <!-- Standard Plan -->
+                    <div class="pricing-card">
+                        <h3 class="tier-name">Monthly Starter</h3>
+                        <div class="price">
+                            <span class="currency">Rp.</span> <span class="amount">15.000.000</span> <span class="period">/ Bulan</span>
+                        </div>
+                        <p class="price-sub">(Total 3 Bulan: Rp. 45.000.000)</p>
+                        <hr class="price-divider">
+                        <ul class="features">
+                            <li>Output: 2 Video + 2 Carousel per bulan.</li>
+                            <li>Kualitas Ultra AI 4K</li>
+                            <li>Free Meta Ads Boots & Management</li>
+                            <li>Bayar Bulanan</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Premium Plan -->
+                    <div class="pricing-card premium-card">
+                        <div class="ribbon-wrapper">
+                            <div class="ribbon">Rekomendasi Utama: The Full Season Bundling</div>
+                        </div>
+                        <h3 class="tier-name">Full Season BUNDLING</h3>
+                        <div class="price">
+                            <span class="currency">Rp.</span> <span class="amount">39.999.999</span>
+                        </div>
+                        <p class="price-sub">(Bayar di Muka untuk 1 Season / 3 Bulan)</p>
+                        <hr class="price-divider">
+                        <ul class="features">
+                            <li>Output: 6 Video + 6 Carousel (Selesai dalam 1 Season).</li>
+                            <li>Kualitas Ultra AI 4K</li>
+                            <li>Free Meta Ads Boots & Management</li>
+                        </ul>
+                        <div class="save-banner">
+                            Hemat Rp. 5.000.001 dengan komitmen penuh 1 Season.
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
