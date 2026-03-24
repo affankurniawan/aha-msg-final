@@ -211,40 +211,84 @@ img, video {
   background-color: var(--bg-offset);
 }
 
-/* --- Narrative Flow (Masalah) --- */
-.cards-grid {
+/* --- Problem Section (Labirin Algoritma) --- */
+.problem-header {
+  margin-bottom: 40px;
+}
+
+.problem-title {
+  text-align: left;
+  font-size: 2.5rem;
+  color: var(--primary-start);
+  font-weight: 800;
+}
+
+.problem-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
-.card {
+.problem-card {
   background: var(--bg-light);
-  border-radius: 16px;
-  padding: 40px 32px;
-  box-shadow: 0 10px 40px rgba(15, 14, 127, 0.05);
+  border-radius: 8px; /* Sharper corners to match design */
+  border: 1.5px solid var(--primary-start);
+  display: flex;
+  flex-direction: column;
   transition: var(--transition);
-  border: 1px solid rgba(226, 232, 240, 0.6);
+  overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(15, 14, 127, 0.1);
-  border-color: var(--primary-end);
+.problem-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(29, 56, 139, 0.1);
 }
 
-.card-icon {
-  font-size: 3rem;
-  margin-bottom: 24px;
+.card-img-box {
+  background: #F3F4F6;
+  margin: 24px 24px 16px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
 }
 
-.card-title {
-  font-size: 1.5rem;
-  margin-bottom: 16px;
+.problem-emoji {
+  font-size: 4rem;
+  opacity: 0.8;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
-.card-desc {
-  color: var(--text-muted);
+.problem-card .card-content {
+  padding: 0 24px 32px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.problem-card .card-title {
+  font-size: 1.25rem;
+  color: var(--primary-start);
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.problem-card .card-desc {
+  color: var(--primary-start);
+  opacity: 0.8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.problem-banner {
+  background: var(--primary-start);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 24px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 40px;
+  border-radius: 8px;
 }
 
 /* --- Framework Solusi (Metode MSG) --- */
@@ -864,7 +908,7 @@ img, video {
 @media (max-width: 768px) {
   .hero-title { font-size: 2rem; }
   .hero-subtitle { font-size: 1.05rem; }
-  .cards-grid, .msg-grid { grid-template-columns: 1fr; }
+  .problem-grid, .msg-grid { grid-template-columns: 1fr; }
   .section { padding: 60px 0; }
   .pricing-grid { grid-template-columns: 1fr; align-items: stretch; }
   .premium-card { padding: 40px; margin-top: 30px; }
