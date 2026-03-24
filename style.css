@@ -230,34 +230,79 @@ img, video {
 }
 
 .problem-card {
-  background: var(--bg-light);
-  border-radius: 8px; /* Sharper corners to match design */
-  border: 1.5px solid var(--primary-start);
+  background: linear-gradient(145deg, #ffffff, #f4f7f6);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    10px 10px 20px rgba(15, 14, 127, 0.05),
+    -10px -10px 20px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 5px rgba(29, 56, 139, 0.05);
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
+  position: relative;
+}
+
+.problem-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FACC15, #D97706);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .problem-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(29, 56, 139, 0.1);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    15px 15px 30px rgba(15, 14, 127, 0.1),
+    -10px -10px 20px rgba(255, 255, 255, 1);
+}
+
+.problem-card:hover::before {
+  opacity: 1;
 }
 
 .card-img-box {
-  background: #F3F4F6;
-  margin: 24px 24px 16px;
-  height: 160px;
+  background: transparent;
+  margin: 32px 24px 16px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
 }
 
-.problem-emoji {
-  font-size: 4rem;
-  opacity: 0.8;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+.icon-3d-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #F8FAFC, #E2E8F0);
+  box-shadow: 
+    8px 8px 16px rgba(15, 14, 127, 0.08),
+    -8px -8px 16px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.8),
+    inset -1px -1px 2px rgba(29, 56, 139, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: perspective(400px) rotateX(15deg) rotateY(-15deg);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+}
+
+.icon-3d-wrapper svg {
+  filter: drop-shadow(0 10px 15px rgba(29, 56, 139, 0.3));
+  transform: translateZ(30px);
+}
+
+.problem-card:hover .icon-3d-wrapper {
+  transform: perspective(400px) rotateX(0deg) rotateY(0deg) translateY(-5px);
+  box-shadow: 
+    12px 12px 20px rgba(15, 14, 127, 0.12),
+    -12px -12px 20px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .problem-card .card-content {
