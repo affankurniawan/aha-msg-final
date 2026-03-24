@@ -903,6 +903,10 @@ img, video {
   flex-direction: column;
 }
 
+.capacity-card {
+  justify-content: center;
+}
+
 .guarantee-header {
   font-size: 1.5rem;
   font-weight: 800;
@@ -921,7 +925,6 @@ img, video {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 32px;
 }
 
 .cap-box {
