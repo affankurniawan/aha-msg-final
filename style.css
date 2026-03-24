@@ -91,13 +91,20 @@ img, video {
   font-size: 0.875rem;
 }
 
-/* --- Typography Utilities --- */
 .gradient-text {
   background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+}
+
+.fw-regular {
+  font-weight: 400 !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
 }
 
 /* --- Hero Section (Split Layout) --- */
