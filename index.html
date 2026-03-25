@@ -66,13 +66,34 @@
                         <div class="card-img-box">
                             <div class="icon-3d-wrapper">
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 12L52 22L32 32L12 22L32 12Z" fill="url(#goldGrad)" stroke="#1D388B" stroke-width="2" stroke-linejoin="round"/>
-                                    <path d="M12 22V42L32 52V32L12 22Z" fill="url(#blueGradDark)" stroke="#1D388B" stroke-width="2" stroke-linejoin="round"/>
-                                    <path d="M52 22V42L32 52V32L52 22Z" fill="url(#blueGradLight)" stroke="#1D388B" stroke-width="2" stroke-linejoin="round"/>
+                                    <!-- Kuantitas/Spam Overlapping Feed Cards -->
+                                    <defs>
+                                        <linearGradient id="goldGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FACC15"/><stop offset="1" stop-color="#D97706"/>
+                                        </linearGradient>
+                                        <linearGradient id="blueGradLight" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#325FEC"/><stop offset="1" stop-color="#1D388B"/>
+                                        </linearGradient>
+                                        <linearGradient id="blueGradDark" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#1D388B"/><stop offset="1" stop-color="#0F0E7F"/>
+                                        </linearGradient>
+                                    </defs>
                                     
-                                    <path d="M32 2L46 9L32 16L18 9L32 2Z" fill="url(#goldGrad)" stroke="#1D388B" stroke-width="1.5" stroke-linejoin="round"/>
-                                    <path d="M18 9V23L32 30V16L18 9Z" fill="url(#blueGradDark)" stroke="#1D388B" stroke-width="1.5" stroke-linejoin="round"/>
-                                    <path d="M46 9V23L32 30V16L46 9Z" fill="url(#blueGradLight)" stroke="#1D388B" stroke-width="1.5" stroke-linejoin="round"/>
+                                    <!-- Back Card -->
+                                    <rect x="32" y="10" width="24" height="28" rx="3" fill="url(#blueGradDark)" stroke="#1D388B" stroke-width="1.5" opacity="0.4"/>
+                                    
+                                    <!-- Middle Card -->
+                                    <rect x="22" y="18" width="24" height="28" rx="3" fill="url(#blueGradLight)" stroke="#1D388B" stroke-width="1.5" opacity="0.7"/>
+                                    
+                                    <!-- Front Card -->
+                                    <rect x="12" y="26" width="24" height="28" rx="3" fill="#F8FAFC" stroke="#1D388B" stroke-width="2"/>
+                                    
+                                    <!-- Front Card Image Block -->
+                                    <rect x="16" y="30" width="16" height="12" rx="2" fill="url(#goldGrad)"/>
+                                    
+                                    <!-- Front Card Text Lines -->
+                                    <line x1="16" y1="46" x2="32" y2="46" stroke="#1D388B" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="16" y1="50" x2="26" y2="50" stroke="#1D388B" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </div>
                         </div>
@@ -121,15 +142,34 @@
                         <div class="card-img-box">
                             <div class="icon-3d-wrapper">
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M54 32C54 44.1503 44.1503 54 32 54C28.5303 54 25.2479 53.197 22.3533 51.789L10 54L12.211 41.6467C10.803 38.7521 10 35.4697 10 32C10 19.8497 19.8497 10 32 10C44.1503 10 54 19.8497 54 32Z" fill="url(#blueGradLight)" stroke="#1D388B" stroke-width="3" stroke-linejoin="round"/>
-                                    <circle cx="24" cy="32" r="3" fill="url(#goldGrad)"/>
-                                    <circle cx="32" cy="32" r="3" fill="url(#goldGrad)"/>
-                                    <circle cx="40" cy="32" r="3" fill="url(#goldGrad)"/>
-                                    <!-- Dust particles -->
-                                    <circle cx="50" cy="18" r="2" fill="#94A3B8"/>
-                                    <circle cx="56" cy="24" r="1.5" fill="#94A3B8"/>
-                                    <circle cx="46" cy="12" r="2.5" fill="#94A3B8"/>
-                                    <circle cx="58" cy="16" r="1" fill="#94A3B8"/>
+                                    <!-- Falling Content Post (Disposable Content) -->
+                                    <g transform="translate(32, 16) rotate(15) translate(-32, -16)">
+                                        <rect x="22" y="0" width="20" height="24" rx="2" fill="#F8FAFC" stroke="#1D388B" stroke-width="2"/>
+                                        <rect x="26" y="4" width="12" height="10" rx="1" fill="url(#goldGrad)"/>
+                                        <line x1="26" y1="18" x2="38" y2="18" stroke="#1D388B" stroke-width="2" stroke-linecap="round"/>
+                                    </g>
+
+                                    <!-- Falling motion trails -->
+                                    <line x1="42" y1="4" x2="42" y2="12" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="20" y1="8" x2="20" y2="16" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="36" y1="2" x2="36" y2="6" stroke="#FACC15" stroke-width="2" stroke-linecap="round"/>
+
+                                    <!-- Premium 3D Trash Can Body -->
+                                    <path d="M22 30 L26 56 C26 59, 38 59, 38 56 L42 30 Z" fill="url(#blueGradLight)" stroke="#1D388B" stroke-width="2" stroke-linejoin="round"/>
+                                    
+                                    <!-- Trash Can Top Opening Rim (Darker blue inside) -->
+                                    <ellipse cx="32" cy="30" rx="10" ry="4" fill="url(#blueGradDark)" stroke="#1D388B" stroke-width="2"/>
+                                    
+                                    <!-- Bouncing Gold Lid -->
+                                    <g transform="translate(14, 20) rotate(-20) translate(-14, -20)">
+                                        <ellipse cx="24" cy="18" rx="12" ry="3" fill="url(#goldGrad)" stroke="#1D388B" stroke-width="2"/>
+                                        <!-- Lid Handle arc -->
+                                        <path d="M20 18 Q24 10 28 18" fill="none" stroke="#1D388B" stroke-width="2" stroke-linecap="round"/>
+                                    </g>
+                                    
+                                    <!-- Trash Can Vertical Ribs Overlay -->
+                                    <path d="M28 36 Q30 46 30 52" fill="none" stroke="#F8FAFC" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                                    <path d="M36 36 Q34 46 34 52" fill="none" stroke="#F8FAFC" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
                                 </svg>
                             </div>
                         </div>
@@ -616,6 +656,19 @@
                             <li>Menjamin Visual AI 4K bebas distorsi.</li>
                             <li>100% Hak cipta ekslusif menjadi milik mutlak brand sepenuhnya.</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engagement Banner (Pre-FAQ) -->
+        <section class="section pre-faq-banner">
+            <div class="container">
+                <div class="engagement-strip reveal-up">
+                    <div class="strip-image"></div>
+                    <div class="strip-content">
+                        <h2>Berhenti<br>Menyewa<br>Atensi.</h2>
+                        <p>Mulailah Membangun Aset<br>Visual Jangka Panjang</p>
                     </div>
                 </div>
             </div>
