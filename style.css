@@ -1191,7 +1191,7 @@ img, video {
 .strip-image {
   flex: 1.2;
   min-height: 400px;
-  background: url('atensi_blue.png') center/cover no-repeat;
+  background: url('assets/atensi_blue.png') center/cover no-repeat;
   position: relative;
 }
 
@@ -1578,6 +1578,7 @@ img, video {
   justify-content: center;
   width: 100%;
 }
+
 
 
 
