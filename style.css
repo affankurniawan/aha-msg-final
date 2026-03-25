@@ -24,6 +24,7 @@ body {
   background-color: var(--bg-light);
   line-height: 1.6;
   overflow-x: hidden;
+  padding-bottom: 90px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -213,6 +214,65 @@ img, video {
 
 .bg-light-blue {
   background-color: var(--bg-offset);
+}
+
+/* --- Dark Section Theme (Cinematic Mode) --- */
+.bg-navy {
+  background-color: var(--primary-start);
+  background-image: 
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.05), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(50, 95, 236, 0.15), transparent 40%);
+  color: #F8FAFC !important;
+}
+
+.bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4,
+.bg-navy .section-title,
+.bg-navy .msg-card-title,
+.bg-navy .eko-item .text,
+.bg-navy .amount,
+.bg-navy .currency,
+.bg-navy .tier-name {
+  color: #FFFFFF !important;
+}
+
+.bg-navy p,
+.bg-navy .section-desc,
+.bg-navy .msg-card-desc,
+.bg-navy .eko-desc,
+.bg-navy .features li,
+.bg-navy .ori-amount,
+.bg-navy .period,
+.bg-navy .price-sub,
+.bg-navy .ribbon {
+  color: #E2E8F0 !important;
+}
+
+.bg-navy .features li::before {
+  color: #FACC15 !important;
+}
+
+.bg-navy .msg-card,
+.bg-navy .eko-item,
+.bg-navy .pricing-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bg-navy .premium-card {
+  background: rgba(15, 14, 127, 0.4) !important;
+  border: 2px solid #FACC15 !important;
+  box-shadow: 0 10px 40px rgba(250, 204, 21, 0.15);
+}
+
+.bg-navy .pricing-card .btn-outline {
+  color: #FACC15 !important;
+  border-color: #FACC15 !important;
+}
+
+.bg-navy .pricing-card .btn-outline:hover {
+  background: #FACC15 !important;
+  color: var(--primary-start) !important;
 }
 
 /* --- Problem Section (Labirin Algoritma) --- */
@@ -775,13 +835,15 @@ img, video {
 }
 
 .currency {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 800;
   vertical-align: top;
+  color: var(--primary-start);
+  margin-right: 2px;
 }
 
 .amount {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1;
 }
@@ -887,8 +949,10 @@ img, video {
 .cap-box {
   width: 64px;
   height: 64px;
-  border: 2px solid var(--primary-start);
-  border-radius: 8px;
+  border: 1px solid rgba(29, 56, 139, 0.15);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff, #f4f7f6);
+  box-shadow: 0 4px 15px rgba(29, 56, 139, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1178,6 +1242,7 @@ img, video {
 }
 
 @media (max-width: 768px) {
+  body { padding-bottom: 160px; }
   .hero-title { font-size: 2rem; }
   .hero-subtitle { font-size: 1.05rem; }
   .problem-grid, .msg-grid { grid-template-columns: 1fr; }
