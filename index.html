@@ -558,17 +558,22 @@
                             <text x="550" y="325" fill="#64748B" font-size="16" font-weight="600" text-anchor="middle">Viral Sesaat</text>
                             
                             <!-- Path: Narasi Episodik (AHA Curve - Blue Gradient) -->
-                            <path id="pathAHA" d="M 50 350 C 160 300, 350 250, 650 50" fill="none" class="path-aha" stroke="url(#ahaGradient)" stroke-width="5" stroke-linecap="round"/>
-                            <circle cx="650" cy="50" r="8" fill="#F4C144" class="aha-curve-dot" />
-                            <text x="500" y="90" fill="#1D388B" font-size="20" font-weight="800" text-anchor="middle">AHA Curve</text>
-
-                            <!-- Gradient Def -->
-                            <defs>
-                                <linearGradient id="ahaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#FACC15" />
-                                    <stop offset="100%" stop-color="#D97706" />
-                                </linearGradient>
-                            </defs>
+                              <path id="pathAHA" d="M 50 350 C 160 300, 350 250, 650 50" fill="none" class="path-aha" stroke="url(#ahaGradient)" stroke-width="6" stroke-linecap="round" filter="url(#goldGlow)"/>
+                              <circle cx="650" cy="50" r="10" fill="#FACC15" class="aha-curve-dot" filter="url(#goldGlow)" />
+                              <circle cx="650" cy="50" r="4" fill="#FFFFFF" />
+                              <text x="500" y="90" fill="#1D388B" font-size="20" font-weight="800" text-anchor="middle">AHA Curve</text>
+  
+                              <!-- Gradient Def -->
+                              <defs>
+                                  <linearGradient id="ahaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                      <stop offset="0%" stop-color="#FACC15" />
+                                      <stop offset="100%" stop-color="#D97706" />
+                                  </linearGradient>
+                                  <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#D97706" flood-opacity="0.4"/>
+                                      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#FACC15" flood-opacity="0.5"/>
+                                  </filter>
+                              </defs>
                         </svg>
                     </div>
                     
@@ -905,3 +910,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
