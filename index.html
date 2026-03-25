@@ -40,14 +40,10 @@
                 </div>
                 <div class="hero-visual reveal-left delay-1">
                     <div class="video-container">
-                        <a href="https://youtu.be/kEMGbOOdUYk" target="_blank" class="video-link">
-                            <img src="https://img.youtube.com/vi/kEMGbOOdUYk/maxresdefault.jpg" alt="AHA MSG Cinematic Masterpiece Thumbnail" class="hero-thumbnail">
-                            <div class="play-button-overlay">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--text-dark)">
-                                    <path d="M8 5V19L19 12L8 5Z"></path>
-                                </svg>
-                            </div>
-                        </a>
+                        <video autoplay loop muted playsinline style="width: 100%; border-radius: 24px; display: block; box-shadow: 0 20px 40px rgba(15, 14, 127, 0.15);">
+                            <source src="Hero.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -390,6 +386,98 @@
                         </div>
                         <p class="eko-desc">Membangun Literasi dan kedalaman Informasi</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri Karya Cinematic (Portfolio) -->
+        <section class="section portfolio" id="karya">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title text-center">Rekam Jejak Cinematic Kami</h2>
+                    <p class="section-desc text-center">Berikut adalah beberapa cuplikan mahakarya AI yang telah kami produksi untuk portofolio internal dan <i>Partner Brand</i> kami.</p>
+                </div>
+                
+                <div class="portfolio-carousel-wrapper reveal-up delay-1">
+                    <button class="carousel-btn prev-btn" id="prevPortfolio" aria-label="Previous">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+
+                    <div class="portfolio-track" id="portfolioTrack">
+                        <!-- Video 1 -->
+                        <div class="video-card">
+                            <div class="video-frame" style="position: relative; padding-bottom: 56.25%; height: 0; background-color: #000;">
+                                <video controls preload="metadata" poster="https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&w=800&q=80" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source src="portfolio-1.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung pemutar video.
+                                </video>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Kampanye Eksklusif: Rekam Jejak Sukses</h3>
+                                <p class="video-brand">AHA Commerce Internal</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 2 -->
+                        <div class="video-card">
+                            <div class="video-frame" style="position: relative; padding-bottom: 56.25%; height: 0; background-color: #000;">
+                                <video controls preload="metadata" poster="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=800&q=80" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source src="portfolio-2.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung pemutar video.
+                                </video>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Peluncuran Komersial Kosmetik Premium</h3>
+                                <p class="video-brand">Klien Industri Kecantikan</p>
+                            </div>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="video-card">
+                            <div class="video-frame" style="position: relative; padding-bottom: 56.25%; height: 0; background-color: #000;">
+                                <video controls preload="metadata" poster="https://images.unsplash.com/photo-1540655037529-dec9815f5eaa?auto=format&fit=crop&w=800&q=80" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source src="portfolio-3.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung pemutar video.
+                                </video>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Kisah Berdirinya Sang Pionir Nusantara</h3>
+                                <p class="video-brand">Klien Industri Kuliner (F&amp;B)</p>
+                            </div>
+                        </div>
+
+                        <!-- Video 4 -->
+                        <div class="video-card">
+                            <div class="video-frame" style="position: relative; padding-bottom: 56.25%; height: 0; background-color: #000;">
+                                <video controls preload="metadata" poster="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source src="portfolio-4.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung pemutar video.
+                                </video>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Profil Perusahaan Teknologi</h3>
+                                <p class="video-brand">Klien Startup B2B</p>
+                            </div>
+                        </div>
+
+                        <!-- Video 5 -->
+                        <div class="video-card">
+                            <div class="video-frame" style="position: relative; padding-bottom: 56.25%; height: 0; background-color: #000;">
+                                <video controls preload="metadata" poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source src="portfolio-5.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung pemutar video.
+                                </video>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Eksplorasi Mahakarya Fashion</h3>
+                                <p class="video-brand">Klien Gaya Hidup Eksklusif</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn next-btn" id="nextPortfolio" aria-label="Next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
                 </div>
             </div>
         </section>

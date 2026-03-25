@@ -658,6 +658,108 @@ img, video {
   line-height: 1.6;
 }
 
+/* --- Galeri Karya Cinematic Section --- */
+.portfolio {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+
+.portfolio-carousel-wrapper {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.portfolio-track::-webkit-scrollbar {
+  display: none; /* Hide Chrome */
+}
+
+.video-card {
+  flex: 0 0 calc(33.333% - 20px);
+  scroll-snap-align: start;
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 14, 127, 0.05);
+  border: 1px solid rgba(29, 56, 139, 0.05);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-btn {
+  background: #FFFFFF;
+  border: 1px solid rgba(29, 56, 139, 0.1);
+  color: var(--primary-start);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(15, 14, 127, 0.1);
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--primary-start);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn { left: -24px; }
+.next-btn { right: -24px; }
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(29, 56, 139, 0.15);
+}
+
+.video-frame {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-info {
+  padding: 24px;
+  background: #FFFFFF;
+  flex-grow: 1;
+}
+
+.video-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.video-brand {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
 /* --- Tabel Disrupsi --- */
 .table-container {
   overflow-x: auto;
@@ -822,7 +924,7 @@ img, video {
   gap: 40px;
   max-width: 900px;
   margin: 0 auto;
-  align-items: end;
+  align-items: center;
 }
 
 .pricing-card {
@@ -1150,12 +1252,14 @@ img, video {
   border-radius: 12px;
   margin-bottom: 16px;
   overflow: hidden;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
-.faq-item:hover {
-  border-color: var(--primary-start);
-  box-shadow: 0 4px 12px rgba(15, 14, 127, 0.05);
+.faq-item:hover, .faq-item.active {
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(15, 14, 127, 0.15);
+  transform: translateY(-2px);
 }
 
 .faq-question {
@@ -1172,21 +1276,24 @@ img, video {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
-.faq-question:hover {
-  color: var(--primary-start);
+.faq-item:hover .faq-question, .faq-item.active .faq-question {
+  color: #FFFFFF;
 }
 
 .faq-question .icon {
   font-size: 1.5rem;
   font-weight: 400;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item:hover .faq-question .icon, .faq-item.active .faq-question .icon {
+  color: var(--accent-yellow);
 }
 
 .faq-item.active .faq-question {
-  color: var(--primary-start);
   padding-bottom: 12px;
 }
 
@@ -1203,6 +1310,11 @@ img, video {
 .faq-answer p {
   padding: 0 24px 24px 24px;
   color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.faq-item:hover .faq-answer p, .faq-item.active .faq-answer p {
+  color: #E2E8F0;
 }
 
 /* --- Sticky Footer --- */
@@ -1353,6 +1465,10 @@ img, video {
   .msg-grid { grid-template-columns: repeat(2, 1fr); }
   .sticky-container { flex-wrap: wrap; justify-content: center; }
   .hide-mobile { display: none !important; }
+  .portfolio-track { gap: 20px; }
+  .video-card { flex: 0 0 calc(50% - 10px); }
+  .prev-btn { left: 0; }
+  .next-btn { right: 0; }
 }
 
 @media (max-width: 768px) {
@@ -1360,6 +1476,8 @@ img, video {
   .hero-title { font-size: 2rem; }
   .hero-subtitle { font-size: 1.05rem; }
   .problem-grid, .msg-grid, .benefits-grid { grid-template-columns: 1fr; }
+  .video-card { flex: 0 0 100%; }
+  .carousel-btn { display: none; } /* Hide arrows on mobile, rely on swipe */
   .benefit-card { padding: 30px 24px; }
   .banner-glass { flex-direction: column; text-align: center; gap: 16px; padding: 24px; }
   .engagement-strip { flex-direction: column; }

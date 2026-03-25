@@ -108,4 +108,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Portfolio Carousel Logic
+    const portfolioTrack = document.getElementById('portfolioTrack');
+    const btnPrev = document.getElementById('prevPortfolio');
+    const btnNext = document.getElementById('nextPortfolio');
+
+    if (portfolioTrack && btnPrev && btnNext) {
+        btnNext.addEventListener('click', () => {
+            const cardWidth = portfolioTrack.querySelector('.video-card').offsetWidth + 30; // Termasuk gap
+            portfolioTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+        
+        btnPrev.addEventListener('click', () => {
+            const cardWidth = portfolioTrack.querySelector('.video-card').offsetWidth + 30;
+            portfolioTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+    }
 });
