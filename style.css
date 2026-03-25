@@ -1540,7 +1540,7 @@ img, video {
   background: linear-gradient(90deg, #FEF08A, #FACC15);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 12px rgba(250, 204, 21, 0.4));
+  filter: drop-shadow(1px 1px 0px #D97706) drop-shadow(2px 2px 0px #B45309) drop-shadow(3px 3px 0px #92400E) drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.6));
 }
 
 .hero-subtitle {
@@ -1578,6 +1578,8 @@ img, video {
   justify-content: center;
   width: 100%;
 }
+
+
 
 
 
