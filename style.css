@@ -615,6 +615,49 @@ img, video {
   font-size: 1.125rem;
 }
 
+/* --- Brand Benefits Section --- */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px;
+  padding: 40px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(250, 204, 21, 0.5) !important;
+  box-shadow: 0 15px 40px rgba(15, 14, 127, 0.4), inset 0 0 20px rgba(250, 204, 21, 0.05);
+}
+
+.benefit-icon {
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.benefit-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FFFFFF !important;
+  margin-bottom: 12px;
+}
+
+.benefit-desc {
+  color: #E2E8F0 !important;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
 /* --- Tabel Disrupsi --- */
 .table-container {
   overflow-x: auto;
@@ -1316,7 +1359,8 @@ img, video {
   body { padding-bottom: 160px; }
   .hero-title { font-size: 2rem; }
   .hero-subtitle { font-size: 1.05rem; }
-  .problem-grid, .msg-grid { grid-template-columns: 1fr; }
+  .problem-grid, .msg-grid, .benefits-grid { grid-template-columns: 1fr; }
+  .benefit-card { padding: 30px 24px; }
   .banner-glass { flex-direction: column; text-align: center; gap: 16px; padding: 24px; }
   .engagement-strip { flex-direction: column; }
   .strip-image { min-height: 250px; }
