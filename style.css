@@ -1191,7 +1191,7 @@ img, video {
 .strip-image {
   flex: 1.2;
   min-height: 400px;
-  background: url('atensi.jpg') center/cover no-repeat;
+  background: url('atensi_blue.png') center/cover no-repeat;
   position: relative;
 }
 
@@ -1551,5 +1551,33 @@ img, video {
 .hero-eyebrow {
   color: #FACC15 !important;
 }
+
+
+
+
+
+
+.final-cta-heading {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--primary-start);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+.final-cta-subheading {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 600;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.cta-button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 
 
