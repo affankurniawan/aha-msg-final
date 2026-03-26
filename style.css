@@ -1,4 +1,4 @@
-/* --- CSS Variables & Resets --- */
+﻿/* --- CSS Variables & Resets --- */
 :root {
   --primary-start: #1D388B;
   --primary-end: #325FEC;
@@ -1026,7 +1026,7 @@ img, video {
 }
 
 .features li::before {
-  content: '•';
+    content: '\2022';
   color: var(--primary-start);
   font-weight: 800;
   position: absolute;
@@ -1578,6 +1578,7 @@ img, video {
   justify-content: center;
   width: 100%;
 }
+
 
 
 
